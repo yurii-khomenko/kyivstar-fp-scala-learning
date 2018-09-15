@@ -1,5 +1,10 @@
 class Car(var serial: Int = 123) {
 
+  def this(serial: Int, speed: Int) = {
+    this(serial)
+    this.speed = speed
+  }
+
   var speed = 0
 
 //  val getSerial = serial
@@ -13,6 +18,7 @@ class Car(var serial: Int = 123) {
 
 val car = new Car
 val car2 = new Car(456)
+val car3 = new Car(456, 200)
 
 car.speed
 car.changeSpeed(60)
