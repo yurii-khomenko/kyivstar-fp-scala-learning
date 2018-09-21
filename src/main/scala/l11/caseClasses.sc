@@ -7,7 +7,7 @@ val car4 = new Car
 car.toString
 
 
-case class Car2(serial: String, maxSpeed: Int, color: String = "black")
+case class Car2(serial: String, maxSpeed: Int, color: String = "black", car: Car = new Car())
 
 val car2 = Car2("123", 100)
 
