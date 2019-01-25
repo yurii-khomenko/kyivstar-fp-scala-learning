@@ -1,13 +1,31 @@
+import java.util.Random
+//
+//import scala.concurrent.ExecutionContext.Implicits.global
+//import scala.concurrent.{Await, Future}
+//import scala.concurrent.duration._
+//
+//val f = Future {
+//  2
+//}
+//
+//f.foreach(println)
+//
+//
+//val result = Await.result(f, 2 seconds)
 
-import scala.concurrent.ExecutionContext.Implicits.global
-import scala.concurrent.{Await, Future}
-import scala.concurrent.duration._
 
-val f = Future {
-  2
-}
+val x = () => "a"
+val y = x
 
-f.foreach(println)
+def x1() = "a"
+
+val z = x1()
+
+x
+y
+x1()
+z
 
 
-val result = Await.result(f, 2 seconds)
+
+def f = (i: Int) => "sdfsdf"
