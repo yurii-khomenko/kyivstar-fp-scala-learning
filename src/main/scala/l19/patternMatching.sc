@@ -1,13 +1,15 @@
+import java.util.UUID
 
+case class Car(id: UUID, name: String)
 
-val x: Any = "asdasda"
+case class Dto(cid: UUID, car: Car, errorId: Int, errorMsg: String)
+
+val x = Dto(UUID.randomUUID(), Car(UUID.randomUUID(), "cactus"), 0, "")
 
 def fun(x: Any) = x match {
 
-  case i: Int if i >= 123 => "!!!!!!!"
- // case i => "!!!"
-  case _ =>
+  case Dto(_, c@Car(_, "cactus"), _, _) => println("match! " +  c.id)
+  case _ => println("mismatch")
 }
-
 
 fun(x)
